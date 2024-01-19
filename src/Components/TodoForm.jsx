@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../todo/todoSlice";
-function TodoForm() {
-  const [input, setInput] = useState("");
+import { addTodo } from "../redux/todoSlice";
+function TodoForm({input,setInput}) {
+  // const [input, setInput] = useState("");
   const dispatch = useDispatch();
 
   const handleAddTodo = (e) => {
@@ -16,6 +16,7 @@ function TodoForm() {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+  
   return (
     <form className="flex flex-col gap-3 pt-2" onSubmit={handleAddTodo}>
       <input
