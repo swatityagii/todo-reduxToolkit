@@ -24,6 +24,7 @@ export const todoSlice = createSlice({
       const todoEdit = state.todos.find((todo) => todo.id === id);
       if (todoEdit) {
         todoEdit.text = textEdit;
+        
       }
     },
     markTodoComplete: (state, action) => {
