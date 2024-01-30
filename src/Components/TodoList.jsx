@@ -58,7 +58,7 @@ function TodoList({ input, setInput, editTodoId, setEditTodoId }) {
           </button>
         </div>
       )}
-      <div className="flex flex-col w-full pt-3 pb-3 gap-3 h-60 overflow-auto ">
+      <div className="flex flex-col w-full pt-3 pb-3 gap-3 h-44 overflow-auto ">
         {filteredTodos().map((todo) => (
           <div
             key={todo.id}
@@ -68,7 +68,7 @@ function TodoList({ input, setInput, editTodoId, setEditTodoId }) {
                 : "border-sky-500 border-2"
             }`}
           >
-            <div className="flex overflow-scroll">
+            <div className="flex overflow-auto ">
               <input
                 type="checkbox"
                 className="mr-2 cursor-pointer "
@@ -78,12 +78,12 @@ function TodoList({ input, setInput, editTodoId, setEditTodoId }) {
               {editTodoId === todo.id ? (
                 <input
                   type="text"
-                  className="mr-2"
+                  className="mr-2 "
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                 />
               ) : (
-                <span>{todo.text}</span>
+                <spanv>{todo.text}</spanv>
               )}
             </div>
             <div className="flex gap-3 text-white">
